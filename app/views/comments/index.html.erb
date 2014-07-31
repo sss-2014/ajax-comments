@@ -1,0 +1,7 @@
+<h1>Listing comments</h1>
+
+<div id="comments">
+  <%= render partial: 'comment', collection: @comments %>
+</div>
+
+<%= render partial: 'comment_form', object: @comment, as: :comment %>

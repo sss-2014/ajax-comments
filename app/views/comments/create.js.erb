@@ -1,0 +1,7 @@
+// j = escape_javascript
+<% if @comment.valid? %>
+    $('#comments').append('<%=j render partial: 'comment', object: @comment %>');
+    $('#new_comment textarea').val('').focus();
+<% else %>
+    $('#new_comment').replaceWith('<%=j render partial: 'comment_form', object: @comment, as: :comment %>')
+<% end %>
